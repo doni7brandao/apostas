@@ -1,0 +1,40 @@
+services:
+  mespronos.breadcrumb.bet:
+    class: Drupal\mespronos\Breadcrumb\BetBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  mespronos.breadcrumb.league:
+    class: Drupal\mespronos\Breadcrumb\LeagueBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  mespronos.breadcrumb.better:
+    class: Drupal\mespronos\Breadcrumb\BetterBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  mespronos.breadcrumb.game:
+    class: Drupal\mespronos\Breadcrumb\GameBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  mespronos.breadcrumb.day:
+    class: Drupal\mespronos\Breadcrumb\DayBreadcrumbBuilder
+    tags:
+      - { name: breadcrumb_builder, priority: 100 }
+  mespronos.domain_manager:
+    class: Drupal\mespronos\MespronosDomainManager
+    arguments: ['@module_handler']
+
+  mespronos.game_manager:
+    class: Drupal\mespronos\GameManager
+    arguments: ['@module_handler']
+
+  mespronos.bet_manager:
+    class: Drupal\mespronos\BetManager
+    arguments: []
+
+  mespronos.user_manager:
+    class: Drupal\mespronos\UserManager
+    arguments: ['@module_handler']
+
+  mespronos.statistics_manager:
+    class: Drupal\mespronos\StatisticsManager
+    arguments: []

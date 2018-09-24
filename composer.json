@@ -1,0 +1,35 @@
+{
+  "name": "mespronos/mespronos",
+  "description": " Betting module build on Drupal 8",
+  "keywords": ["mespronos","drupal8","drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://mespronos.net",
+  "authors": [
+    {
+      "name": "Kevin Gautreau",
+      "email": "contact@mespronos.net",
+      "homepage": "https://kgaut.net",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "~1.0"
+  },
+  "extra": {
+    "installer-name": "mespronos"
+  },
+  "type":"drupal-module",
+  "repositories": [
+    {
+      "type": "composer",
+      "url":  "https://packages.drupal.org/8"
+    }
+  ],
+  "require-dev": {
+    "php": ">=7.0",
+    "phpro/grumphp": "^0.11.3",
+    "jakub-onderka/php-parallel-lint": "^0.9.2",
+    "jakub-onderka/php-console-highlighter": "^0.3.2"
+  }
+}
